@@ -1,0 +1,49 @@
+student-dropout-risk-dashboard/
+│
+├── public/
+│   └── vite.svg
+│
+├── src/
+│   ├── components/
+│   │   ├── Dashboard.tsx
+│   │   ├── StudentTable.tsx
+│   │   │
+│   │   ├── Charts/
+│   │   │   ├── AttendanceChart.tsx
+│   │   │   ├── MarksDistributionChart.tsx
+│   │   │   ├── RiskDistributionChart.tsx
+│   │   │   └── SubjectPerformanceChart.tsx
+│   │   │
+│   │   ├── Cards/
+│   │   │   ├── StatsCard.tsx
+│   │   │   ├── RiskIndicatorCard.tsx
+│   │   │   └── StudentDetailCard.tsx
+│   │   │
+│   │   └── Layout/
+│   │       ├── Header.tsx
+│   │       ├── Sidebar.tsx
+│   │       └── Footer.tsx
+│   │
+│   ├── data/
+│   │   ├── students.ts
+│   │   └── calculateRisk.ts
+│   │
+│   ├── types/
+│   │   └── index.ts
+│   │
+│   ├── App.tsx
+│   ├── App.css
+│   ├── main.tsx
+│   ├── index.css
+│   └── vite-env.d.ts
+│
+├── .gitignore
+├── index.html
+├── package.json
+├── package-lock.json
+├── README.md
+├── vite.config.ts
+├── tsconfig.json
+├── tsconfig.node.json
+├── tailwind.config.js
+└── postcss.config.js
