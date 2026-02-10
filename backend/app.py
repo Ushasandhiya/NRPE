@@ -1,5 +1,3 @@
-# app.py
-
 from flask import Flask, jsonify
 import sqlite3
 import pandas as pd
@@ -12,105 +10,113 @@ DB_NAME = "students.db"
 CSV_FILE = "students.csv"
 
 # -------------------------
-# CREATE DB FROM CSV (if not exists)
+# CREATE DATABASE (ONLY IF NOT EXISTS)
 # -------------------------
 if not os.path.exists(DB_NAME):
     conn = sqlite3.connect(DB_NAME)
-    c = conn.cursor()
-    
-    # Create table
-    c.execute("""
-    CREATE TABLE students (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name TEXT,
-        gender TEXT,
-        attendance REAL,
-        marks REAL,
-        scholar_type TEXT,
-        study_time REAL,
-        scholarship INTEGER,
-        assignment_submission REAL
-    )
-    """)
-    
-    # Load CSV into pandas
-    df = pd.read_csv("students.csv")
-    
-    # Insert into SQLite
-    df.to_sql("students", conn, if_exists="append", index=False)
-    
-    conn.commit()
+    df = pd.read_csv(CSV_FILE)
+    df.to_sql("students", conn, index=False)
     conn.close()
 
 # -------------------------
 # INIT FLASK
 # -------------------------
 app = Flask(__name__)
-DB_NAME ="students.db"
-
 
 # -------------------------
-# HELPER FUNCTION: DB CONNECT
+# HELPER FUNCTIONS
 # -------------------------
-# Helper function to fetch all students from database as dictionaries
 def get_all_students():
     conn = sqlite3.connect(DB_NAME)
-    conn.row_factory = sqlite3.Row  # Allows dict-like access
-    c = conn.cursor()
-    c.execute("SELECT * FROM students")
-    rows = c.fetchall()
+    conn.row_factory = sqlite3.Row
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM students")
+    rows = cur.fetchall()
     conn.close()
     return [dict(row) for row in rows]
+
+
+def get_column_names():
+    conn = sqlite3.connect(DB_NAME)
+    cur = conn.cursor()
+    cur.execute("PRAGMA table_info(students)")
+    cols = [row[1] for row in cur.fetchall()]
+    conn.close()
+    return cols
 
 
 # -------------------------
 # ROUTES
 # -------------------------
-
-# Home route
 @app.route("/")
 def home():
     return "Flask backend running! Go to /students or /stats"
 
-# 1️⃣ Get all students
-@app.route("/students", methods=["GET"])
-def students():
-    students_list = get_all_students()
-    return jsonify(students_list)
 
-# 2️⃣ Get dashboard stats
-@app.route("/stats", methods=["GET"])
+@app.route("/students")
+def students():
+    return jsonify(get_all_students())
+
+
+@app.route("/stats")
 def stats():
-    students_list = get_all_students()
-    total_students = len(students_list)
+    students = get_all_students()
+
+    total_students = len(students)
 
     if total_students == 0:
-        return jsonify({
-            "total_students": 50,
+        return {
+            "total_students": 0,
             "avg_marks": 0,
             "avg_attendance": 0,
             "scholarship_count": 0,
-            "hosteller_count": 0,
+            "hosteler_count": 0,
             "day_scholar_count": 0
-        })
+        }
 
-    avg_marks = round(sum(float(s["Marks Average"]) for s in students_list)/total_students, 2)
-    avg_attendance = round(sum(float(s["Attendance %"].replace('%','')) for s in students_list)/total_students, 2)
-    scholarship_count = sum(1 for s in students_list if str(s["Scholarship"]).lower() in ["1","yes"])
-    hosteller_count = sum(1 for s in students_list if str(s["Scholar Type"]).lower() == "hosteller")
-    day_scholar_count = total_students - hosteller_count
+    # ---- AVERAGES ----
+    avg_marks = sum(
+        float(s.get("Marks Average", 0) or 0)
+        for s in students
+        if str(s.get("Marks Average", "")).strip() != ""
+    ) / total_students
 
-    return jsonify({
+    avg_attendance = sum(
+        float(s.get("Attendance %", 0) or 0)
+        for s in students
+        if str(s.get("Attendance %", "")).strip() != ""
+    ) / total_students
+
+    # ---- SCHOLARSHIP COUNT (Yes / No) ----
+    scholarship_count = sum(
+        1 for s in students
+        if str(s.get("Scholarship", "")).strip().lower() == "yes"
+    )
+
+    # ---- SCHOLAR TYPE ----
+    hosteler_count = sum(
+        1 for s in students
+        if str(s.get("Scholar Type", "")).strip().lower() == "hosteler"
+    )
+
+    day_scholar_count = sum(
+        1 for s in students
+        if str(s.get("Scholar Type", "")).strip().lower() == "day scholar"
+    )
+
+    return {
         "total_students": total_students,
-        "avg_marks": avg_marks,
-        "avg_attendance": avg_attendance,
+        "avg_marks": round(avg_marks, 2),
+        "avg_attendance": round(avg_attendance, 2),
         "scholarship_count": scholarship_count,
-        "hosteller_count": hosteller_count,
+        "hosteler_count": hosteler_count,
         "day_scholar_count": day_scholar_count
-    })
+    }
+
 
 # -------------------------
 # RUN SERVER
 # -------------------------
 if __name__ == "__main__":
+    print("DB columns:", get_column_names())  # one-time visibility
     app.run(debug=True)
