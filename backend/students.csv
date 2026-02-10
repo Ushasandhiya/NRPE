@@ -1,0 +1,51 @@
+Name,Roll No,Sex,Age,Address,Phone Number,Family Size,Parents Occupation,Travel Time,Scholar Type,Study Time,Attendance %,Assignment Submission,Marks Average,Scholarship,Health Issues,Extra Curricular Activities
+Aarav Kumar,CSE1001,Female,22,Rural,9350251922,Small,Private Job,<15 min,Day Scholar,Low,68,Missing,52,No,Diabetes,Sports
+Diya Sharma,CSE1002,Female,18,Urban,9965943335,Large,Farmer,15-30 min,Hosteller,Medium,94,On Time,87,Yes,Asthma,None
+Vikram Patel,CSE1003,Male,21,Urban,9518643366,Medium,Private Job,<15 min,Hosteller,Low,68,Late,51,Yes,Migraine,None
+Sneha Reddy,CSE1004,Female,23,Rural,9798317959,Small,Government Job,<15 min,Hosteller,High,92,Late,77,No,Diabetes,NSS
+Arjun Nair,CSE1005,Female,21,Rural,9978346382,Large,Business,15-30 min,Hosteller,High,75,Late,69,Yes,None,None
+Kavya Iyer,CSE1006,Female,21,Rural,9159087995,Large,Farmer,15-30 min,Day Scholar,High,89,Missing,57,Yes,Diabetes,NCC
+Rahul Verma,CSE1007,Male,20,Urban,9401902852,Small,Business,>1 hr,Day Scholar,Low,83,Late,94,Yes,Diabetes,Music
+Meera Joshi,CSE1008,Male,18,Urban,9165057289,Medium,Government Job,<15 min,Day Scholar,Low,96,On Time,83,No,Asthma,Dance
+Karthik Raj,CSE1009,Female,23,Urban,9183012927,Small,Government Job,15-30 min,Hosteller,High,98,Late,72,Yes,Diabetes,NSS
+Ananya Singh,CSE1010,Male,20,Urban,9029092654,Large,Private Job,>1 hr,Hosteller,High,86,On Time,73,No,None,NSS
+Rohit Gupta,CSE1011,Male,18,Rural,9883992029,Large,Private Job,<15 min,Hosteller,Medium,92,On Time,79,No,None,Music
+Pooja Mehta,CSE1012,Male,19,Rural,9746384929,Small,Government Job,15-30 min,Day Scholar,High,72,Missing,67,No,Migraine,Music
+Aditya Mishra,CSE1013,Male,20,Urban,9632054058,Medium,Farmer,>1 hr,Hosteller,Low,90,Missing,53,Yes,Vision Problem,Music
+Neha Agarwal,CSE1014,Male,22,Urban,9035024110,Medium,Business,<15 min,Hosteller,Low,63,On Time,67,Yes,Migraine,None
+Sanjay Das,CSE1015,Female,19,Urban,9062282966,Medium,Government Job,30-60 min,Hosteller,Medium,68,Missing,84,Yes,Migraine,Sports
+Priya Nair,CSE1016,Female,22,Rural,9013597435,Large,Government Job,30-60 min,Day Scholar,Low,83,Missing,88,No,Vision Problem,Dance
+Harish Kumar,CSE1017,Male,22,Rural,9586255013,Large,Private Job,>1 hr,Hosteller,High,97,On Time,81,No,Asthma,NCC
+Divya Menon,CSE1018,Male,20,Rural,9109561560,Large,Farmer,15-30 min,Hosteller,Medium,75,Late,69,No,Diabetes,NCC
+Manoj Kumar,CSE1019,Male,21,Urban,9847104208,Small,Business,>1 hr,Hosteller,High,69,On Time,57,No,Asthma,Music
+Lakshmi Priya,CSE1020,Female,21,Rural,9193411802,Large,Government Job,>1 hr,Hosteller,Low,89,Missing,70,Yes,Migraine,Sports
+Nikhil Jain,CSE1021,Male,19,Urban,9286754738,Small,Farmer,>1 hr,Hosteller,Medium,84,On Time,93,No,Vision Problem,Dance
+Shreya Kapoor,CSE1022,Male,21,Rural,9244961932,Small,Labour,30-60 min,Hosteller,Medium,72,Missing,94,Yes,Diabetes,Dance
+Ajay Yadav,CSE1023,Male,23,Rural,9330630007,Medium,Government Job,>1 hr,Hosteller,High,78,On Time,63,Yes,None,Music
+Swathi Rao,CSE1024,Female,19,Rural,9113003481,Medium,Government Job,15-30 min,Day Scholar,High,65,Late,66,Yes,Migraine,Sports
+Deepak Saini,CSE1025,Female,20,Rural,9472817417,Medium,Private Job,30-60 min,Day Scholar,Medium,87,On Time,94,No,None,Music
+Ritu Saxena,CSE1026,Male,23,Urban,9369903229,Large,Government Job,30-60 min,Day Scholar,Medium,98,Late,82,Yes,Vision Problem,None
+Varun Bansal,CSE1027,Female,18,Urban,9347618330,Medium,Business,30-60 min,Day Scholar,High,99,On Time,85,Yes,Asthma,Music
+Isha Chatterjee,CSE1028,Female,23,Rural,9236088174,Medium,Business,15-30 min,Hosteller,Low,62,Missing,83,Yes,None,Dance
+Suresh Babu,CSE1029,Male,18,Rural,9498732346,Medium,Private Job,>1 hr,Hosteller,Low,85,On Time,57,Yes,Diabetes,Sports
+Nandhini K,CSE1030,Male,18,Urban,9864084686,Large,Government Job,15-30 min,Day Scholar,Low,99,Missing,82,No,Migraine,NSS
+Amit Tiwari,CSE1031,Female,20,Urban,9026674917,Large,Labour,15-30 min,Hosteller,High,73,On Time,60,Yes,Vision Problem,Music
+Keerthi R,CSE1032,Female,19,Rural,9001396630,Medium,Labour,30-60 min,Hosteller,Medium,87,On Time,63,No,Vision Problem,NCC
+Ramesh Gowda,CSE1033,Male,19,Urban,9332664441,Large,Private Job,30-60 min,Hosteller,Medium,68,Missing,52,No,Asthma,None
+Bhavya Shetty,CSE1034,Male,21,Rural,9871025092,Small,Private Job,30-60 min,Day Scholar,Low,60,Missing,90,Yes,Migraine,Music
+Siddharth Roy,CSE1035,Male,22,Urban,9726041796,Small,Government Job,15-30 min,Hosteller,High,73,On Time,89,No,None,Music
+Gayathri P,CSE1036,Male,22,Rural,9747993476,Medium,Private Job,>1 hr,Hosteller,High,71,Late,79,Yes,Asthma,NCC
+Kiran B,CSE1037,Female,19,Rural,9021017019,Large,Labour,15-30 min,Hosteller,Low,76,On Time,79,No,Asthma,NCC
+Ankit Sharma,CSE1038,Male,20,Rural,9188524407,Medium,Government Job,<15 min,Day Scholar,Low,84,Missing,85,Yes,None,Sports
+Reshma Ali,CSE1039,Male,21,Rural,9465671166,Large,Farmer,<15 min,Hosteller,High,80,On Time,68,Yes,Migraine,NSS
+Farhan Khan,CSE1040,Male,18,Rural,9154644730,Medium,Farmer,>1 hr,Day Scholar,Medium,87,Late,54,No,Diabetes,NCC
+Praveen Kumar,CSE1041,Male,23,Urban,9493767242,Small,Farmer,30-60 min,Hosteller,High,73,Missing,69,Yes,Vision Problem,NSS
+Aishwarya M,CSE1042,Female,21,Urban,9945524956,Small,Government Job,30-60 min,Hosteller,Medium,62,Late,76,No,Diabetes,Sports
+Lokesh H,CSE1043,Female,22,Urban,9723696719,Large,Private Job,15-30 min,Day Scholar,Medium,65,On Time,75,No,Asthma,NCC
+Harini V,CSE1044,Female,20,Urban,9688294642,Small,Labour,<15 min,Hosteller,Medium,78,On Time,78,No,Vision Problem,Sports
+Tarun P,CSE1045,Female,19,Urban,9975012900,Medium,Government Job,<15 min,Day Scholar,High,82,Missing,85,No,Asthma,Music
+Naveen S,CSE1046,Female,20,Rural,9048018663,Medium,Farmer,15-30 min,Hosteller,Low,82,Missing,64,Yes,Vision Problem,NCC
+Karthika D,CSE1047,Male,21,Rural,9503312944,Small,Labour,15-30 min,Day Scholar,Medium,91,Missing,58,Yes,Migraine,NCC
+Vignesh R,CSE1048,Male,18,Urban,9138119694,Large,Business,30-60 min,Day Scholar,Medium,90,On Time,92,Yes,Diabetes,NCC
+Yamini S,CSE1049,Male,19,Urban,9297272446,Medium,Government Job,30-60 min,Hosteller,Low,93,On Time,55,No,Vision Problem,Dance
+Aravind G,CSE1050,Female,20,Urban,9121484665,Large,Labour,30-60 min,Hosteller,Low,100,On Time,84,Yes,Vision Problem,Dance
